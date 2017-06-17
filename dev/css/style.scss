@@ -1,0 +1,1455 @@
+//@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+@import "_css3-mixins";
+@import "sprite";
+
+$ColorGreen: #158d37;
+$ColorBlack: #2b2e3b;
+$ColorLightTurquoise: #ebf9f3;
+
+*{
+	outline: none;
+}
+body {
+	background-color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: $ColorBlack;
+}
+
+
+.btn{	
+	color: #fff;
+	background-color:$ColorGreen;
+	padding: 9px 24px;
+	color: #fff!important;
+	@include border-radius(3px);
+	&:hover{
+		background-color: #017923;
+		color: #fff;
+	}
+}
+h2.title{
+	color:$ColorBlack;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 36px;
+	text-align: center;
+	margin: 0;
+}
+.shadow{
+	@include box-shadow(0px, 1px, 7.52px, 0.48px, rgba(0, 0, 0, 0.26));
+}
+.jq-selectbox{
+	background-color: #fff;
+	width: 100%;
+	&__select{
+		background: transparent;
+		box-shadow: none;
+		height: 40px;
+		&-text{
+			margin-top: 4px;
+		}
+	}
+	&__trigger-arrow{
+		border-top-color: $ColorGreen;
+		top: 18px;
+	}
+}
+
+
+input[type=radio] + label {
+	cursor: pointer;
+}
+input[typy=radio]:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+input[type=radio]:not(checked) + label {
+	position: relative;
+	padding: 0 30px;
+}
+input[type=radio]:not(checked) + label:before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	border: 1px solid #c5cad0;
+	@include border-radius(50%);
+	background: #FFF;
+}
+input[type=radio]:not(checked) + label:after {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 4px;
+	width: 9px;
+	height: 9px;
+	@include border-radius(50%);
+	border: 1px solid #c5cad0;
+	transition: all .2s;
+}
+input[type=radio]:checked + label:after {
+	background: $ColorGreen;
+	border: none;
+}
+input[type=radio] {
+  	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 0px;
+	padding: 0px;
+}
+input[type=text],input[type=tel]{
+	padding: 9px 14px;
+	border: 1px solid #d5dbe3;
+	@include border-radius(3px);
+}
+
+header{
+	padding: 14px;
+	.navbar-default {
+	    background-color: transparent;
+	    border-color: transparent;
+	    margin-bottom: 0;
+	    z-index: 9;
+	    border-radius: 0;
+	    font-weight: 400;
+	    text-align: center;
+	    margin-top: 2%;
+		@include transition(all 0.2s ease-out 0s);	
+		.navbar-collapse {
+			padding: 0;
+		}
+		.navbar-nav {
+		    margin: 0;
+		    float: none;
+		    li {
+				float: none;
+				display: inline-block; 	
+				a,a:focus{
+					padding: 10px 9px;
+					color: $ColorBlack;
+				}
+				a:hover {
+					color: $ColorGreen;
+				}
+			}	
+		}
+	}
+	#header-phone{
+		text-align: right;
+		margin-top: 15px;
+		p {
+			a{color:$ColorBlack;}
+			font-weight: 700;	
+			margin: 0;	
+		}
+		div{
+			cursor: pointer;
+			color:$ColorGreen;
+			text-decoration: underline;
+			&:hover{
+				font-weight: bold;
+			}
+		}
+		i.fa{
+			color: $ColorGreen;
+		}
+	}
+	.fixed {
+		position: fixed;
+		top: 0;
+		background-color: rgba(0,0,0,.8)!important;
+		margin-top: 0!important;
+		width: 100%;
+		left: 0;
+		padding: 10px 0;
+		z-index: 999;
+		.navbar-nav {
+			a,a:focus{
+				color: #fff!important;
+			}
+			a:hover {
+				color: $ColorGreen!important;
+			}
+		}	
+	}
+}
+
+
+#main{
+	background: url('../img/main.jpg') no-repeat;
+	background-size: cover;
+	padding-top: 25px;
+	text-align: center;
+	color:#ffffff;
+	&__bg{
+		padding: 50px;
+		background-color: rgba(255,255,255,.85);
+		text-align: left;
+		&_img{
+			text-align: center;
+			img{
+				margin-top: 20px;
+				width: 70%;
+			}	
+		}
+	}
+	&__title{
+		font-size: 26.36px;
+	    font-weight: 700;
+	    margin-top: 10px;
+	    margin-bottom: 40px;
+	    text-align: left;
+	    color: #2b2e3b;
+		span{
+			color: $ColorGreen;
+		}
+	}
+	&__advantages{
+		margin-top: 20px;
+		background-color: rgba(0, 0, 0, 0.42);
+		padding: 40px 0 50px;
+		overflow: hidden;
+		[class*="col-sm"]{
+			border-right: 1px solid rgba(255, 255, 255, .212);
+			margin-top: 20px;
+			&:last-child{
+				border-right: none;
+			}
+		}
+		&_title{
+			text-transform: uppercase;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 29px;
+			margin-bottom: 20px;
+		}
+		p{
+			font-weight: 700;
+			line-height: 22px;
+		}
+		span{
+			float: left;
+			display: block;
+		}
+		#icon-1{ @include sprite($sp-1); }
+		#icon-2{ @include sprite($sp-2); }
+		#icon-3{ @include sprite($sp-3); }
+		#icon-4{ @include sprite($sp-4); }
+
+		.main__advantages_btn{
+			font-size: 12px;
+			line-height: 22px;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		.descript{
+			display: none;
+		}
+
+	}
+}
+
+#comparison-material{
+	padding-top: 80px;
+	padding-bottom: 70px;
+	table{
+		margin-top: 90px;
+		th{
+			&:first-child{
+				width: 222px;
+				color: #979797;
+				font-weight: normal;
+				background-color: transparent;
+				padding-left: 20px;
+				text-align: left;
+				font-size: 14px;
+			}
+			position: relative;
+			background-color: #bebfc1;
+			width: 150px;
+			height: 105px;
+			color: #ffffff;
+			font-size: 12px;
+			text-align: center;
+			padding: 8px;
+			text-transform: uppercase;
+			&:after{
+				content: '';
+				display: block;
+				height: 100%;
+				width: 5px;
+				background-color: #fff;
+				position: absolute;
+				top: 0;
+				left: -3px;
+			}
+			.textpop{
+				width: 100%;
+				height: 45px;
+				display: table;
+				margin-top: 40px;
+				p{
+					vertical-align: middle;
+					display: table-cell;
+
+				}
+			}
+			[id*="icon-"]{
+				position: absolute;
+				top: -45px;
+				left: 30px;
+			}
+		}
+		tr{
+			padding: 7px;			
+			width: 150px;
+			text-align: center;
+			&:nth-child(2n){
+				background-color: #f5fcf9;
+			}	
+			&:nth-child(2n) td:last-child{
+				background-color: $ColorLightTurquoise;
+			}
+			td{
+				padding: 10px;
+				&:first-child{
+					text-align: left;
+					padding: 7px 20px;
+				}
+				&:last-child{
+					font-weight: bold;
+				}			
+			}
+		}
+		th{
+			&:last-child{
+				background-color: $ColorGreen;
+			}
+		}
+		#icon-5{ @include sprite($sp-5); }
+		#icon-6{ @include sprite($sp-6); }
+		#icon-7{ @include sprite($sp-7); }
+		#icon-8{ @include sprite($sp-8); }
+		#icon-9{ @include sprite($sp-9); }
+		#icon-10{ @include sprite($sp-10); }
+	}
+}
+
+
+#comparison-thermopanels{
+	.container{
+		max-width: 970px;
+	}
+	padding-bottom: 80px;
+	.bg{
+		background: url('../img/comparison-thermopanels.jpg') no-repeat;
+		background-size: cover;
+		padding: 65px 0px;
+		position: relative;
+		h2.title{
+			color: #fff;
+		}
+		p{
+			margin-top: 20px;
+			color: #ffffff;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 21px;
+			text-align: center;			
+		}
+		#btn_bottom{
+			z-index: 1;
+			background: $ColorGreen;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			padding: 16px 0px 0px 22px;
+			position: absolute;
+			left: 50%;
+			margin-left: -25px;
+			bottom: -25px;
+			color: #fff;
+			@include transform(rotate(90deg));
+			&:before{
+				content: "\f054";
+				font: 14px/1 FontAwesome;		
+			}
+		}
+	}
+	.calc{
+		margin: 30px 128px 73px;
+		p{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1;
+			margin: 37px 0 15px;
+		}
+		[class*="col-sm"]:first-child{
+			padding-right: 55px;
+		}
+		label[for*="frame-material"]{
+			cursor: pointer;
+		}
+		label{
+			font-weight: normal;
+		}
+		input[type=text]{
+			width: 67%;
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+	}
+	[class*="col-sm-6"]{
+		&:nth-child(1){ 
+			.res{	
+				margin-left: -15px;
+			}
+		}
+		&:nth-child(2){ 
+			.res{
+				margin-right: -15px;
+			}
+		}
+	}
+	.res{
+		min-height: 314px;
+		p{
+			margin: 0;
+		}
+		padding: 50px;
+		margin-top: 30px;
+		hr{
+			margin: 0 -50px;
+			border-top: 1px solid #ededed;
+			margin-bottom: 47px;
+		}
+		&__title{
+			font-size: 17px;
+			font-weight: bold;
+			padding-bottom: 38px;
+			line-height: 1;
+			&_green{
+				color: $ColorGreen;
+				float: right;
+			}
+			&_red{
+				color: #e55157;
+				float: right;
+			}
+		}
+		&__li_title{
+			font-weight: bold;
+			padding-bottom: 10px;
+		}
+		[id*="icon"]{
+			position: absolute;
+			top: 175px;
+			right: 35px;
+		}
+
+		#icon-ct-1{ @include sprite($sp-5); }
+		#icon-ct-2{ @include sprite($sp-6); }
+		#icon-ct-3{ @include sprite($sp-7); }
+		#icon-ct-4{ @include sprite($sp-8); }
+		#icon-ct-5{ @include sprite($sp-9); }
+		#icon-ct-6{ @include sprite($sp-10); }
+
+		#icon-11{ @include sprite($sp-11); }
+	}
+	.res1{
+		text-align: center;
+		font-size: 20px;
+		margin-top: 50px;
+		#price_econom{
+			font-weight: bold;
+			font-size: 26px;
+		}
+	}	
+}
+
+#use-hermopanels{
+	background-color: $ColorLightTurquoise;
+	padding: 85px 0;
+	font-weight: bold;
+	h2{
+		
+	}
+	.use-hermopanels__block{
+		background-color: #fff;
+		overflow: hidden;
+		&_title{
+			font-size: 22px;
+			text-align: center;
+			margin: 55px 0 0px;
+			min-height: 63px;
+		}
+		img{
+			float: left;
+			margin-right: 35px;
+			width: 100%;
+		}
+		p{
+			margin-left: 20px;
+			&:nth-child(1){
+				margin-top: 50%;
+			}
+		}
+	}
+}
+#our-panels-look{
+	padding: 80px 0;
+	text-align: center;
+	.container{ max-width: 755px; }
+	h2{
+		margin-bottom: 25px;
+	}
+	&__title{
+		font-size: 18px;
+		font-weight: bold;
+		text-align: left;
+		margin-bottom: 11px;
+	}
+	[class*="col-"]{
+		margin-top: 45px;
+		border-right: 1px solid #ebf3f9;
+		min-height: 260px;
+		&:last-child{
+			border: none;
+		}
+	}
+	.our-panels-look__color_view{
+		padding: 10px 0;
+		text-align: left;
+		cursor: pointer;
+		position: relative;
+		&.active{
+			.bg{
+				display: block;
+			}
+			span{
+				font-weight: bold;
+			}
+		}
+		span{
+			margin-left: 10px;
+			font-size: 16px;
+		}
+		.bg{
+			width: 101px;
+			height: 55px;
+			position: absolute;
+			top: 10px;
+			display: none;
+			background-color: rgba(0,0,0,0.5);
+			&:before{
+				content: "\f00c";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				padding-top: 17px;
+				margin-left: 25px;
+				font-size: 20px;
+				line-height: 1;
+				font-family: FontAwesome;
+				text-align: center;
+				color: #ffffff;
+			}
+		}
+	}
+}
+#drawing-thermopanel{
+	padding: 85px 0 90px;
+	text-align: center;
+	h2.title{
+		margin-bottom: 60px;
+	}
+	img{
+	    width: 100%;
+	    max-width: 480px;
+	}
+	a{
+		outline: none;
+	}
+}
+#final-cost-thermopanels{
+	background: url('../img/brick-background.png') center no-repeat;
+	background-size: contain;
+	height: 488px;
+	text-align: center;
+	.container{ max-width: 831px; }
+	h2.title{
+		margin-top: 150px;
+		margin-bottom: 85px;
+	}
+	input{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}
+#calculate-cost-cladding{
+	padding: 85px 0 90px;
+
+	h2.title{
+		margin-bottom: 60px;
+	}
+	.calculate-cost-cladding__block-1{
+		img{
+			width: 100%;
+			z-index: 3;
+		}
+		[id*="calc-cost"]{
+			position: absolute;
+			z-index: -1;
+			background-color: #ddd;
+		}
+		#calc-cost{
+			&-roof{
+				top: 12%;
+				left: 0px;
+				width: 100%;
+				height: 38%;
+			}
+			&-ground{
+				right: 9.5%;
+				width: 59.5%;
+				height: 6%;
+				bottom: 15.5%;
+			}
+			&-first-floor{
+			    width: 49%;
+			    height: 22%;
+			    bottom: 22%;
+			    right: 12.26%;
+				&1{
+					width: 25.21%;
+					height: 24%;
+					bottom: 22%;
+					left: 10.25%;
+				}
+			}
+			&-second-floor{
+				width: 49%;
+				height: 22%;
+				top: 31%;
+				right: 12.26%;
+			}
+			&-decoration{
+				width: 3.2%;
+				height: 24%;
+				bottom: 22%;
+				left: 7%;
+				&1{
+					width: 2.7%;
+					height: 16%;
+					top: 31%;
+					left: 36.19%;
+				}
+				&2{
+					width: 3.09%;
+					height: 24%;
+					bottom: 22%;
+					left: 35.6%;
+				}
+				&3{
+					width: 2.94%;
+					height: 47%;
+					bottom: 22%;
+					right: 9.3%;					
+				}
+			}
+			&-chimney{
+				top: 15.8%;
+				left: 50.549%;
+				width: 6.157%;
+				height: 5%;
+			}
+		}
+	}
+	.calculate-cost-cladding__block-2{
+		/* margin-left: 1px; */
+		.farbtastic{
+			margin: 0 auto;
+		}
+		a#href{
+			color: $ColorGreen;
+			margin-left: 30px;
+			text-decoration: underline;
+		}
+		p{
+			text-align: right;
+			font-size: 16px;
+			span#price-calc-cost{
+				font-weight: bold;
+			}
+		}
+		.btn{
+			width: 100%;
+		}
+		input[type=select],input[type=text],input[type=tel]{
+			width: 100%;
+		}
+		input[type=radio] + label{
+			width: 54px;
+			height: 54px;
+			padding: 0;
+			margin-top: 15px;
+			margin-right: 20px;
+			&:after{
+				opacity: 0;
+			}
+			&:before{
+				opacity: 0;
+			}
+		}
+		.panel-group {
+			.panel{
+				box-shadow: none;
+				border-radius: none;
+				&-title{
+					position: relative;
+					font-weight: bold;
+					font-size: 14px;
+					&:before{
+						color: $ColorGreen;
+						top: 2px;
+						right: 10px;
+						content: "\f054";
+						font: normal normal normal 14px/1 FontAwesome;
+						position: absolute;	
+						@include transform(rotate(-90deg));		
+					}
+
+				}
+				&-body{
+					border-top-color: #ebf3f9;
+					background-color: #f5fcf9;
+
+					padding: 17px 30px;
+				}
+				& + .panel{
+					margin-top: 0;
+				}
+				.panel-heading{
+					padding: 17px 30px;
+					background-color: $ColorLightTurquoise;
+					width: 100%;
+					display: block;
+					text-decoration: none;
+					&.collapsed{
+						background-color: transparent;
+						.panel-title:before{
+							@include transform(rotate(90deg));
+						}
+					}
+				}
+				&.panel-default{
+					border: none;
+					border-bottom: 1px solid #ebf3f9;
+				}
+			}	
+		}
+	}
+}
+
+#houses-thermo-panels{
+	padding: 85px 0;
+	background-color: $ColorLightTurquoise;
+	text-align: center;
+	ul#houses-thermo-panels-slider{
+		max-width: 970px;
+		margin: 0 auto;
+		margin-top: 55px;
+		padding: 0;
+		.htps-title{
+			text-align: left;
+			font-size: 16.63px;
+			font-weight: bold;
+			margin-bottom: 35px;
+		}
+		.block{
+			margin-top: 30px;
+			margin-bottom: 25px;
+			background-color: #fff;
+			padding: 30px;
+			img{
+				float: left;
+				margin-right: 18px;
+			}
+			p{
+				text-align: left;
+				&:nth-child(2){
+					font-size: 14px;
+				}
+				&:last-child{
+					font-size: 12px;
+					display: table-cell;
+				}
+			}
+		}
+		.pull-prev, .pull-next{
+			z-index: 3;
+			width: 20px;
+			height: 60px;
+			display: block;
+			margin-top: -1px;
+			&:before{
+				font: normal normal normal 60px/1 FontAwesome;
+				position: relative;			
+			}
+		}
+		.pull-prev { 
+			left: -50px;
+			width: 40px;
+			&:before{
+				content: "";
+				width: 40px;
+				height: 2px;
+				background-color: rgba(0,0,0,.5);
+				display: block;
+				@include transform(rotate(-45deg));
+			} 
+			&:after{
+				content: "";
+				width: 40px;
+				margin-top: 26px;
+				height: 2px;
+				background-color: rgba(0,0,0,.5);
+				display: block;
+				@include transform(rotate(45deg));	
+			}
+		}
+		.pull-next { 
+			right: -50px; 
+			width: 40px;
+			&:before{
+				content: "";
+				width: 40px;
+				height: 2px;
+				background-color: rgba(0,0,0,.5);
+				display: block;
+				@include transform(rotate(45deg));
+			}
+			&:after{
+				content: "";
+				width: 40px;
+				margin-top: 26px;
+				height: 2px;
+				background-color: rgba(0,0,0,.5);
+				display: block;
+				@include transform(rotate(-45deg));	
+			}
+		}
+	}
+
+	ul.houses-thermo-panels-slider{
+		&-for{
+			padding: 0;
+			img{
+				width: 100%;
+				padding: 0 4px;
+			}
+		}		
+		&-nav{
+			padding: 0;
+			img{
+				width: 100%;
+				margin: 0 auto;				margin: 5px;
+				margin-top: 10px;
+			}
+			li{
+				height: 111px;
+
+				overflow: hidden;
+			}
+			.slick-prev, .slick-next{
+				z-index: 1;
+				background: rgba(0,0,0,.3);
+				width: 20px;
+				height: 90.6%;
+				display: block;
+				margin-top: 5px;
+				&:before{
+					top: 0px;
+					margin-left: 7px;
+					font: normal normal normal 30px/1 FontAwesome;
+					position: relative;			
+				}
+			}
+			.slick-prev { 
+				left: 5px;
+				&:before{
+					left: -5px;
+					content: "\f104";
+				} 
+			}
+			.slick-next { 
+				right: 1px; 
+				&:before{
+					left: -3px;
+					content: "\f105";
+				}
+			}
+		}
+	}	
+}
+#about-thermopanels{
+	padding-top: 85px;
+	padding-bottom: 90px;
+	h2.title{
+		margin-bottom: 45px;
+	}
+	&-video{
+		height: 530px;
+	}
+}
+#uniqueness-thermopanels{
+	padding-top: 85px;
+	background-color: $ColorLightTurquoise;
+	.container{max-width: 830px;}
+	h2.title{margin-bottom: 50px;}
+	.block{
+		position: relative;
+		min-height: 490px;
+		&__text{
+			&:nth-child(2){
+				top: -5%;
+			}
+			&:nth-child(3){
+				top: 35%;
+			}
+			&:nth-child(4){
+				top: 73%;
+			}
+			max-width: 371px;
+			position: absolute;
+			top: 0;
+			right: 3%;
+			&_title{
+				font-size: 22px;
+				font-weight: bold;
+				color: $ColorGreen;
+			}
+			&_text{
+				font-weight: normal;
+				font-size: 16px;
+			}
+		}
+	}
+	p#uniqueness-thermopanels__text{
+		font-size: 16px;
+		margin-top: 45px;
+		margin-bottom: 30px;
+	}
+}
+#thermalpanel-replaces{
+	padding-top: 85px;
+	margin-bottom: 70px;
+	&__img{
+		padding-top: 100px;
+		position: relative;
+		img{
+			width: 100%;
+		}
+		p{
+			position: absolute;
+			top: 0;
+			font-size: 16px;
+			text-align: center;
+			&:nth-child(2){
+				top: 11.5%;
+				left: 3%;
+			}
+			&:nth-child(3){
+				right: 63%;
+				top: 31.5%;
+			}
+			&:nth-child(4){
+				right: 46%;
+				top: 42%;
+			}
+			&:nth-child(5){
+				right: 25%;
+				top: 58%;
+			}
+			&:nth-child(6){
+				right: 2%;
+				top: 78%;
+			}
+		}
+	}
+}
+#simple-install-thermalpanels{
+	background: url('../img/brick-background.png') center no-repeat;
+	background-size: contain;
+	height: 488px;
+	font-size: 16px;
+	text-align: center;
+	p{
+		margin-bottom: 35px;
+	}
+	.container{ max-width: 970px; }
+	h2.title{
+		margin-top: 150px;
+		margin-bottom: 20px;
+	}
+	input{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+#history-creating-thermopanels{
+	padding: 90px 0;
+	h2.title{
+		margin-bottom:50px;
+	}
+	img{
+		width: 100%;
+	}
+	&__founder{
+		margin-top: 65px;
+		font-size: 22px;
+		font-weight: bold;
+	}
+}
+#thermopanels-certified{
+	background: url('../img/thermopanels-certified.jpg') no-repeat;
+	background-size: cover;
+	padding-bottom: 80px;
+	h2.title{
+		margin: 90px 0 55px;
+		color: #fff;
+	}
+	ul{
+		padding: 0;
+	}
+	.slick-prev { 
+		width: 40px;
+		height: 55px;
+		&:before{
+			content: "";
+			width: 40px;
+			height: 2px;
+			background-color: rgba(255,255,255,.5);
+			display: block;
+			@include transform(rotate(-45deg));
+		} 
+		&:after{
+			content: "";
+			width: 40px;
+			margin-top: 26px;
+			height: 2px;
+			background-color: rgba(255,255,255,.5);
+			display: block;
+			@include transform(rotate(45deg));	
+		}
+	}
+	.slick-next {  
+		width: 40px;
+		height: 55px;
+		&:before{
+			content: "";
+			width: 40px;
+			height: 2px;
+			background-color: rgba(255,255,255,.5);
+			display: block;
+			@include transform(rotate(45deg));
+		}
+		&:after{
+			content: "";
+			width: 40px;
+			margin-top: 26px;
+			height: 2px;
+			background-color: rgba(255,255,255,.5);
+			display: block;
+			@include transform(rotate(-45deg));	
+		}
+	}
+	img{
+		margin: 0 auto;
+	}
+}
+#invite-cooperation{
+	background: url('../img/brick-background.png') center no-repeat;
+	background-size: contain;
+	height: 488px;
+	font-size: 16px;
+	text-align: center;
+	margin: 90px 0 82px;
+	p{
+		margin-bottom: 35px;
+	}
+	.container{ max-width: 970px; }
+	h2.title{
+		margin-top: 150px;
+		margin-bottom: 20px;
+	}
+	input{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+#our-production{
+	background: url('../img/our-production.jpg') no-repeat;
+	background-size: cover;
+	padding: 85px 0 90px;
+	.container{max-width: 970px;}
+	h2.title{
+		margin-bottom: 60px;
+		color: #fff;
+	}
+	ul{
+		padding: 0;
+		&#our-production-slider{
+			&-for{
+				li{
+					img{
+						margin: 0 auto;
+					}
+				}
+			}
+			&-nav{
+				li{
+					overflow: hidden;
+					img{
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+	.slick-prev { 
+		left: -65px;
+		width: 40px;
+		height: 55px;
+		&:before{
+			content: "";
+			width: 40px;
+			height: 2px;
+			background-color: rgba(255,255,255,.5);
+			display: block;
+			@include transform(rotate(-45deg));
+		} 
+		&:after{
+			content: "";
+			width: 40px;
+			margin-top: 26px;
+			height: 2px;
+			background-color: rgba(255,255,255,.5);
+			display: block;
+			@include transform(rotate(45deg));	
+		}
+	}
+	.slick-next { 
+		right: -55px; 
+		width: 40px;
+		height: 55px;
+		&:before{
+			content: "";
+			width: 40px;
+			height: 2px;
+			background-color: rgba(255,255,255,.5);
+			display: block;
+			@include transform(rotate(45deg));
+		}
+		&:after{
+			content: "";
+			width: 40px;
+			margin-top: 26px;
+			height: 2px;
+			background-color: rgba(255,255,255,.5);
+			display: block;
+			@include transform(rotate(-45deg));	
+		}
+	}
+}
+#how-order{
+	padding: 80px 0;
+	text-align: center;
+	h2.title{
+		margin-bottom: 50px;
+	}
+	[id*="icon-"]{
+		margin: 0 auto;
+		min-height: 64px;
+		margin-bottom: 25px;
+	}
+	[class*="col-"]{
+		min-height: 160px;
+	}
+	&__block{
+		padding: 53px 0;
+		border-top: 1px solid #f4f4f5; 
+		border-bottom: 1px solid #f4f4f5; 
+		overflow: hidden;
+	}
+	#icon-13{ @include sprite($sp-13); }
+	#icon-14{ @include sprite($sp-14); }
+	#icon-15{ @include sprite($sp-15); }
+	#icon-16{ @include sprite($sp-16); }
+	#icon-17{ @include sprite($sp-17); }
+	#icon-18{ @include sprite($sp-18); }
+}
+#delivery{
+	padding-top: 85px;
+	padding-bottom: 90px;
+	background: url('../img/delivery.jpg') center no-repeat;
+	background-size: cover;
+	h2.title{
+		margin-bottom: 50px;
+	}
+	img{
+		width: 100%;
+	}
+	[class="col-sm-6"]{
+		min-height: 64px;
+	}
+	&__block{
+		background-color: #fff;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 55px 30px;
+		form{
+			overflow: hidden;
+			font-weight: normal;
+			input{
+				width: 100%;
+				margin-bottom: 24px;
+				margin-right: 20px;
+				margin-left: -15px;
+			}
+			button{
+				margin-left: -15px;
+			}
+
+		}
+		ul{
+			padding: 0;
+			list-style-type: none;
+			li{
+				display: table;
+				margin-bottom: 15px;
+				p{
+					display: block;
+					font-weight: normal;
+					&:first-child{
+						margin-top: 15px;
+						margin-bottom: 0;
+					}
+					&:last-child{
+						margin-bottom: 0;
+					}
+
+				}
+				&:before{
+					content: "\f00c";
+					font: normal normal normal 20px/1 FontAwesome;
+					padding-right: 10px;
+					color: $ColorGreen;
+					position: relative;
+					display: table-cell;
+					top: 2px;
+				}
+			}
+		}
+		&_title{
+			margin-top: 64px;
+			margin-bottom: 30px;
+			font-size: 20px;
+		}
+	}
+}
+#asked-questions{
+	padding-top: 85px;
+	padding-bottom: 80px;
+	font-size: 12px;
+	h2.title{
+		margin-bottom: 55px;
+	}
+	.asked-questions__block{
+		padding: 44px 40px 37px;
+		margin-bottom: 10px;
+		&_title{
+			color: $ColorGreen;
+			font-size: 16px;
+			font-weight: bold;
+			margin-left: 40px;
+			margin-bottom: 20px;
+			&:before{
+				content: '';
+				margin-left: -40px;
+				margin-top: -4px;
+				position: absolute;
+				@include sprite($sp-19);
+			}
+		}
+	}
+}
+#have-questions{
+	padding-top: 85px;
+	padding-bottom: 90px;
+	background: url('../img/have-questions.jpg') no-repeat;
+	background-size: cover;
+	text-align: center;
+	&__title{
+		margin: 25px 0 55px;
+		font-size: 16px;
+	}
+	form{
+		input{
+			width: 100%;	
+			margin-bottom: 10px;
+		}
+	}
+}
+footer{
+	padding: 30px 0;
+	text-align: center;
+	#footer-phone{
+		text-align: right;
+		p{
+			a{color:$ColorBlack;}
+			font-weight: 700;	
+			margin: 0;	
+		}
+		div{
+			cursor: pointer;
+			color:$ColorGreen;
+			text-decoration: underline;
+			&:hover{
+				font-weight: bold;
+			}
+		}
+		i.fa{
+			color: $ColorGreen;
+		}
+	}	
+}
+
+.modal {
+	text-align: center;
+	&-header {
+		border: 0;
+	}
+	&-title {
+		color: $ColorBlack;
+		font-size: 27px;
+		line-height: 1;
+		font-weight: 700;
+		text-align: center;
+	}
+}	
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-content {box-shadow: none;background-color: #fff;}
+
+#Modal-form, #Modal-form-header {
+	color: $ColorBlack;
+	text-align: center;
+	h4{
+		text-align: center;
+		font-size: 25px;
+	}
+	form{
+		overflow: hidden;
+		padding: 16px 0;
+		text-align: center;
+		input, button{
+			margin: 10px 0;
+			max-width: 300px;
+			width: 100%;
+		}
+	}
+	.modal-header {
+		border-bottom: 0;
+	}
+	.modal-footer {
+		border-top: 0;
+	}
+}
+#Modal-form-thanks{
+	h4{
+		font-size: 47px;
+	}
+	.modal-footer {
+		border-top: 0;
+	}
+}
+
+@import "_media";

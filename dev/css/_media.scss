@@ -1,0 +1,254 @@
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+
+
+
+/* width: 20px;
+height: 57.3%;
+display: block;
+margin-top: -17px; */
+
+
+@media (max-width: $screen-sm-max) { 
+	#main{
+		&__bg{
+			padding: 10px;
+			text-align: center;
+		}
+		&__title{
+			margin: 20px 0;
+			font-size: 25px;
+			line-height: 30px;
+			text-align: center;
+		}
+		&__advantages{
+			margin-top: 20px;
+			&_title{
+				font-size: 15px;
+				line-height: 30px;
+			}
+		}
+	}	
+	#comparison-thermopanels {
+		.calc{
+			margin: 30px 20px 73px;
+		}
+		.res{
+			padding: 30px;
+			#icon-11{
+				right: 20px;
+			}
+			#icon-12{
+				right: 5px;
+			}
+		}
+	}
+	#use-hermopanels .use-hermopanels__block p{
+		&:nth-child(1){ margin-top: 25%; }
+	}
+	#thermalpanel-replaces__img p {
+	    font-size: 12px!important;
+		&:nth-child(2){
+			top: 20.5%;
+			left: 3%;
+		}
+		&:nth-child(3){
+			right: 63%;
+			top: 40.5%;
+		}
+		&:nth-child(4){
+			right: 46%;
+			top: 51%;
+		}
+		&:nth-child(5){
+			right: 25%;
+			top: 63%;
+		}
+		&:nth-child(6){
+			right: 2%;
+			top: 83%;
+		}
+	}
+	#houses-thermo-panels ul#houses-thermo-panels-slider .htps-title{
+		margin-left: -15px;
+	}
+	#uniqueness-thermopanels .block__text{
+		max-width: 290px;
+		&:nth-child(1){
+
+		}
+		&:nth-child(2){
+
+		}
+		&:nth-child(3){
+
+		}
+	}	
+}
+
+@media (max-width: 1200px) {
+	#houses-thermo-panels ul#houses-thermo-panels-slider{
+		.pull-prev { 
+			left: 0px;
+		}
+		.pull-next { 
+			right: 0px;
+		}	
+	}
+}
+
+@media (max-width: 640px) {
+	#final-cost-thermopanels, #simple-install-thermalpanels{
+		height: 350px;
+		h2.title{
+			margin: 20px 0;
+			font-size: 22px;
+			line-height: 1;
+		}
+	}
+	#invite-cooperation{
+		margin: 0;
+		height: 350px;
+		h2.title{
+			margin: 20px 0;
+		}	
+	}
+
+}	
+@media (max-width: 1023px) {
+	#comparison-thermopanels{
+		[class*="col-sm-6"]{
+			&:nth-child(1){ 
+				.res{	
+					margin-left: 0px;
+					hr{
+						margin: 0px -30px 47px;
+					}
+				}
+			}
+			&:nth-child(2){ 
+				.res{
+					margin-right: 0px;
+					hr{
+						margin: 0px -30px 47px;
+					}
+				}
+			}
+		}
+	}
+	#thermalpanel-replaces__img p{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1084px) {
+	#our-production, #thermopanels-certified {
+		.slick-next{
+			right: 10px;
+		}
+		.slick-prev{
+			left: 10px;
+		}
+	}
+	#houses-thermo-panels ul#houses-thermo-panels-slider{
+		.pull-prev{
+			left: -25px;
+		}
+		.pull-next{
+			right: -25px;
+		}
+	}
+}
+
+@media (max-width: 697px) { 
+	#thermalpanel-replaces__img p {
+	    font-size: 5px!important;
+		&:nth-child(2){
+			top: 40.5%;
+			left: 3%;
+		}
+		&:nth-child(3){
+			right: 63%;
+			top: 54.5%;
+		}
+		&:nth-child(4){
+			right: 46%;
+			top: 62%;
+		}
+		&:nth-child(5){
+			right: 25%;
+			top: 71%;
+		}
+		&:nth-child(6){
+			right: 2%;
+			top: 85%;
+		}
+	}
+}
+
+@media (max-width: $screen-md-max) {
+	header .navbar-default .navbar-nav li a{
+		padding: 10px 6px;
+	}
+}
+@media (max-width: $screen-xs-max) { 
+	#main{
+		&__advantages [class*="col-sm"]{
+			border-right: none;
+		}
+		.btn{
+			padding: 9px;
+		}
+	}
+	#comparison-thermopanels {
+		.calc{
+			margin: 30px 20px 73px;
+		}
+		.res{
+			padding: 30px;
+			[id*="icon"]{
+				right: 5px;
+			}
+		}
+	}
+	#uniqueness-thermopanels{
+		.block__text, &__text{
+			text-align: center;
+		}
+		.block{
+			min-height: 0px;
+			&__text{
+				top: 0px!important;
+				position: relative;
+				max-width: 100%;
+				right: 0px;
+			}
+		}
+	}
+	#delivery{
+		h2.title{
+			margin-bottom: 20px;
+		}
+		&__block form{
+			button, input{
+				width: 100%;
+				margin: 5px 0;
+			}
+		}
+	}
+	footer #footer-phone, header #header-phone{
+		text-align: center;
+	}
+	#final-cost-thermopanels h2.title{
+		margin-top: 0;
+	}
+	#houses-thermo-panels ul#houses-thermo-panels-slider .htps-title{
+		text-align: center;
+		margin: 20px 0;
+	}
+
+}

@@ -1,0 +1,288 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$sp-1-name: 'sp-1';
+$sp-1-x: 0px;
+$sp-1-y: 52px;
+$sp-1-offset-x: 0px;
+$sp-1-offset-y: -52px;
+$sp-1-width: 40px;
+$sp-1-height: 40px;
+$sp-1-total-width: 123px;
+$sp-1-total-height: 1699px;
+$sp-1-image: 'sprite.png';
+$sp-1: (0px, 52px, 0px, -52px, 40px, 40px, 123px, 1699px, 'sprite.png', 'sp-1', );
+$sp-10-name: 'sp-10';
+$sp-10-x: 0px;
+$sp-10-y: 774px;
+$sp-10-offset-x: 0px;
+$sp-10-offset-y: -774px;
+$sp-10-width: 90px;
+$sp-10-height: 90px;
+$sp-10-total-width: 123px;
+$sp-10-total-height: 1699px;
+$sp-10-image: 'sprite.png';
+$sp-10: (0px, 774px, 0px, -774px, 90px, 90px, 123px, 1699px, 'sprite.png', 'sp-10', );
+$sp-11-name: 'sp-11';
+$sp-11-x: 0px;
+$sp-11-y: 1549px;
+$sp-11-offset-x: 0px;
+$sp-11-offset-y: -1549px;
+$sp-11-width: 95px;
+$sp-11-height: 150px;
+$sp-11-total-width: 123px;
+$sp-11-total-height: 1699px;
+$sp-11-image: 'sprite.png';
+$sp-11: (0px, 1549px, 0px, -1549px, 95px, 150px, 123px, 1699px, 'sprite.png', 'sp-11', );
+$sp-12-name: 'sp-12';
+$sp-12-x: 0px;
+$sp-12-y: 1434px;
+$sp-12-offset-x: 0px;
+$sp-12-offset-y: -1434px;
+$sp-12-width: 123px;
+$sp-12-height: 95px;
+$sp-12-total-width: 123px;
+$sp-12-total-height: 1699px;
+$sp-12-image: 'sprite.png';
+$sp-12: (0px, 1434px, 0px, -1434px, 123px, 95px, 123px, 1699px, 'sprite.png', 'sp-12', );
+$sp-13-name: 'sp-13';
+$sp-13-x: 0px;
+$sp-13-y: 690px;
+$sp-13-offset-x: 0px;
+$sp-13-offset-y: -690px;
+$sp-13-width: 56px;
+$sp-13-height: 64px;
+$sp-13-total-width: 123px;
+$sp-13-total-height: 1699px;
+$sp-13-image: 'sprite.png';
+$sp-13: (0px, 690px, 0px, -690px, 56px, 64px, 123px, 1699px, 'sprite.png', 'sp-13', );
+$sp-14-name: 'sp-14';
+$sp-14-x: 0px;
+$sp-14-y: 292px;
+$sp-14-offset-x: 0px;
+$sp-14-offset-y: -292px;
+$sp-14-width: 64px;
+$sp-14-height: 56px;
+$sp-14-total-width: 123px;
+$sp-14-total-height: 1699px;
+$sp-14-image: 'sprite.png';
+$sp-14: (0px, 292px, 0px, -292px, 64px, 56px, 123px, 1699px, 'sprite.png', 'sp-14', );
+$sp-15-name: 'sp-15';
+$sp-15-x: 0px;
+$sp-15-y: 606px;
+$sp-15-offset-x: 0px;
+$sp-15-offset-y: -606px;
+$sp-15-width: 54px;
+$sp-15-height: 64px;
+$sp-15-total-width: 123px;
+$sp-15-total-height: 1699px;
+$sp-15-image: 'sprite.png';
+$sp-15: (0px, 606px, 0px, -606px, 54px, 64px, 123px, 1699px, 'sprite.png', 'sp-15', );
+$sp-16-name: 'sp-16';
+$sp-16-x: 0px;
+$sp-16-y: 446px;
+$sp-16-offset-x: 0px;
+$sp-16-offset-y: -446px;
+$sp-16-width: 64px;
+$sp-16-height: 60px;
+$sp-16-total-width: 123px;
+$sp-16-total-height: 1699px;
+$sp-16-image: 'sprite.png';
+$sp-16: (0px, 446px, 0px, -446px, 64px, 60px, 123px, 1699px, 'sprite.png', 'sp-16', );
+$sp-17-name: 'sp-17';
+$sp-17-x: 0px;
+$sp-17-y: 368px;
+$sp-17-offset-x: 0px;
+$sp-17-offset-y: -368px;
+$sp-17-width: 91px;
+$sp-17-height: 58px;
+$sp-17-total-width: 123px;
+$sp-17-total-height: 1699px;
+$sp-17-image: 'sprite.png';
+$sp-17: (0px, 368px, 0px, -368px, 91px, 58px, 123px, 1699px, 'sprite.png', 'sp-17', );
+$sp-18-name: 'sp-18';
+$sp-18-x: 0px;
+$sp-18-y: 526px;
+$sp-18-offset-x: 0px;
+$sp-18-offset-y: -526px;
+$sp-18-width: 64px;
+$sp-18-height: 60px;
+$sp-18-total-width: 123px;
+$sp-18-total-height: 1699px;
+$sp-18-image: 'sprite.png';
+$sp-18: (0px, 526px, 0px, -526px, 64px, 60px, 123px, 1699px, 'sprite.png', 'sp-18', );
+$sp-19-name: 'sp-19';
+$sp-19-x: 0px;
+$sp-19-y: 0px;
+$sp-19-offset-x: 0px;
+$sp-19-offset-y: 0px;
+$sp-19-width: 32px;
+$sp-19-height: 32px;
+$sp-19-total-width: 123px;
+$sp-19-total-height: 1699px;
+$sp-19-image: 'sprite.png';
+$sp-19: (0px, 0px, 0px, 0px, 32px, 32px, 123px, 1699px, 'sprite.png', 'sp-19', );
+$sp-2-name: 'sp-2';
+$sp-2-x: 0px;
+$sp-2-y: 232px;
+$sp-2-offset-x: 0px;
+$sp-2-offset-y: -232px;
+$sp-2-width: 40px;
+$sp-2-height: 40px;
+$sp-2-total-width: 123px;
+$sp-2-total-height: 1699px;
+$sp-2-image: 'sprite.png';
+$sp-2: (0px, 232px, 0px, -232px, 40px, 40px, 123px, 1699px, 'sprite.png', 'sp-2', );
+$sp-3-name: 'sp-3';
+$sp-3-x: 0px;
+$sp-3-y: 172px;
+$sp-3-offset-x: 0px;
+$sp-3-offset-y: -172px;
+$sp-3-width: 40px;
+$sp-3-height: 40px;
+$sp-3-total-width: 123px;
+$sp-3-total-height: 1699px;
+$sp-3-image: 'sprite.png';
+$sp-3: (0px, 172px, 0px, -172px, 40px, 40px, 123px, 1699px, 'sprite.png', 'sp-3', );
+$sp-4-name: 'sp-4';
+$sp-4-x: 0px;
+$sp-4-y: 112px;
+$sp-4-offset-x: 0px;
+$sp-4-offset-y: -112px;
+$sp-4-width: 30px;
+$sp-4-height: 40px;
+$sp-4-total-width: 123px;
+$sp-4-total-height: 1699px;
+$sp-4-image: 'sprite.png';
+$sp-4: (0px, 112px, 0px, -112px, 30px, 40px, 123px, 1699px, 'sprite.png', 'sp-4', );
+$sp-5-name: 'sp-5';
+$sp-5-x: 0px;
+$sp-5-y: 884px;
+$sp-5-offset-x: 0px;
+$sp-5-offset-y: -884px;
+$sp-5-width: 90px;
+$sp-5-height: 90px;
+$sp-5-total-width: 123px;
+$sp-5-total-height: 1699px;
+$sp-5-image: 'sprite.png';
+$sp-5: (0px, 884px, 0px, -884px, 90px, 90px, 123px, 1699px, 'sprite.png', 'sp-5', );
+$sp-6-name: 'sp-6';
+$sp-6-x: 0px;
+$sp-6-y: 994px;
+$sp-6-offset-x: 0px;
+$sp-6-offset-y: -994px;
+$sp-6-width: 90px;
+$sp-6-height: 90px;
+$sp-6-total-width: 123px;
+$sp-6-total-height: 1699px;
+$sp-6-image: 'sprite.png';
+$sp-6: (0px, 994px, 0px, -994px, 90px, 90px, 123px, 1699px, 'sprite.png', 'sp-6', );
+$sp-7-name: 'sp-7';
+$sp-7-x: 0px;
+$sp-7-y: 1104px;
+$sp-7-offset-x: 0px;
+$sp-7-offset-y: -1104px;
+$sp-7-width: 90px;
+$sp-7-height: 90px;
+$sp-7-total-width: 123px;
+$sp-7-total-height: 1699px;
+$sp-7-image: 'sprite.png';
+$sp-7: (0px, 1104px, 0px, -1104px, 90px, 90px, 123px, 1699px, 'sprite.png', 'sp-7', );
+$sp-8-name: 'sp-8';
+$sp-8-x: 0px;
+$sp-8-y: 1214px;
+$sp-8-offset-x: 0px;
+$sp-8-offset-y: -1214px;
+$sp-8-width: 90px;
+$sp-8-height: 90px;
+$sp-8-total-width: 123px;
+$sp-8-total-height: 1699px;
+$sp-8-image: 'sprite.png';
+$sp-8: (0px, 1214px, 0px, -1214px, 90px, 90px, 123px, 1699px, 'sprite.png', 'sp-8', );
+$sp-9-name: 'sp-9';
+$sp-9-x: 0px;
+$sp-9-y: 1324px;
+$sp-9-offset-x: 0px;
+$sp-9-offset-y: -1324px;
+$sp-9-width: 90px;
+$sp-9-height: 90px;
+$sp-9-total-width: 123px;
+$sp-9-total-height: 1699px;
+$sp-9-image: 'sprite.png';
+$sp-9: (0px, 1324px, 0px, -1324px, 90px, 90px, 123px, 1699px, 'sprite.png', 'sp-9', );
+$spritesheet-width: 123px;
+$spritesheet-height: 1699px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($sp-1, $sp-10, $sp-11, $sp-12, $sp-13, $sp-14, $sp-15, $sp-16, $sp-17, $sp-18, $sp-19, $sp-2, $sp-3, $sp-4, $sp-5, $sp-6, $sp-7, $sp-8, $sp-9, );
+$spritesheet: (123px, 1699px, 'sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
